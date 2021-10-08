@@ -1,14 +1,28 @@
 \section{Introduction}
-In this section we address the problem which motivates this project. We then present an overview of the project showing how it connects to this problem, and also highlight some of its salient features. Some relevant prior work and the contribution which we make through this project is given.
 
 \subsection{Problem Statement and motivation}
-A few lines outlining the (real life) problem that your project is connected to and why should this project be done.
+
+Every project has some boilerplate code that is common across all the projects. For instance, a developer has developed a MERN stack project. Now he is starting to work on another MERN stack project. He has to do all the configurations again that he did in the previous project. These configurations include but are not limited to setting up frontend boilerplate, setting up backend boilerplate, connecting the frontend with the backend via a REST API, integrating firebase inside the project. All of these mentioned configurations have the same code in all projects. Yet, we have to spend time on it to do it again and again. Collectively, this consumes a lot of time.
+
+The motivation behind proposing this idea is to automate all this grunt work. And build a tool that can do all these configurations within minutes, if not seconds.
 
 \subsection{Overview of the Project}
-A few lines of how you will be making this project, what you will be doing in it, the plus points of your project and how it addresses or connects to the problem at hand.
+
+Our software generates a boilerplate code repository based on the \emph{configuration} that a user wants. A \emph{configuration} can consist of the libraries, frameworks, databases, features, and other technologies that the user wants to add to their project. As an example, a user might want to setup a \emph{ReactJS} frontend with a \emph{Express} backend along with \emph{TailwindCSS} as their design library and \emph{Firebase} as their database. They can select all these options through the software's interface and generate boilerplate code according to their own needs.
+
+We plan to build one of the following types of interfaces to interact with our software.
+\begin{enumerate}
+  \item \textbf{Command Line Tool:} We can develop write a Command Line Interface (CLI) with Node.js (a Javascript runtime) and publish it on Node Package Manager (NPM) repository. The user can select the configuration they want either by passing arguments to the command line, or by writing them in a configuration file.
+  \item \textbf{Website:} We can develop a website where the user can enter configuration by clicking through and checking/unchecking various options. They can then either download the generated boilerplate code or have it setup as a git repository.
+\end{enumerate}
 
 \subsection{Prior work}
-Two or three paragraphs that succinctly show previous work which is connected to your project.
+
+When Facebook introduced React.js, the software developers had to do all the configurations themselves to get started with building a React.js project. Facebook acknowledged this issue, and developed create-react-app (CRA). CRA is a tool that provides you a boilerplate code that you can use to get started with React.js.  create-react-app uses webpack for bundler, babel to transpile ES6 JavaScript to older version and other tools to provide you a clean boilerplate without the need for you to configure everything on your own. Now, create-react-app has more than 100,000 downloads weekly and is widely being used by the developer community.
 
 \subsection{Our Contribution}
-How you are adding to (or assisting) the current work that has been done
+
+There are a few other tools like create-react-app that generates boilerplates. All of these tools are technology specific. That means they only create boilerplate for their particular technology. create-react-app creates a React.js boilerplate. create-next-app creates a Next.js boilerplate. There is no generic tool in the market at the moment. Yet the concept exists of building automation tools to generate boilerplate.
+
+We are proposing to create such a generic tool that not only generates React.js frontend but also creates Node.js backend’s boilerplate at the same time. A tool that also produces Python frameworks’ boilerplates. A tool that you can also integrate services like firebase.
+
