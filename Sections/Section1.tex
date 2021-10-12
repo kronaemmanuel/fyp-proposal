@@ -1,8 +1,16 @@
 \section{Introduction}
 
+\subsection{Terminology}
+
+\textbf{Boilerplate Code:} For the purposes of our project, the term boilerplate code means the initial code that a developer needs to set up to get a project of some specific stack working. It is the 'scaffolding' code with basic features that can then be used as a base to start a project.
+
+\textbf{Configuration:} A project's configuration refers to the different languages, frameworks, and libraries being used in a project. This configuration is needed by our tool to generate boilerplate code for the user.
+
 \subsection{Problem Statement and motivation}
 
-Every project has some boilerplate code that is common across all the projects. For instance, a developer has developed a MERN stack project. Now he is starting to work on another MERN stack project. He has to do all the configurations again that he did in the previous project. These configurations include but are not limited to setting up frontend boilerplate, setting up backend boilerplate, connecting the frontend with the backend via a REST API, integrating firebase inside the project. All of these mentioned configurations have the same code in all projects. Yet, we have to spend time on it to do it again and again. Collectively, this consumes a lot of time.
+We initially faced this problem ourselves as freelance developers working for multiple clients when we had to go through very similar steps for each client's app to reach a point after which we could incorporate stuff that was specific to the client's demands. These repeated configurations include but are not limited to setting up frontend boilerplate, setting up backend boilerplate, connecting the frontend with the backend via a REST API, connecting a database inside the project. All of these mentioned configurations have the same code across multiple projects. Yet, we had to spend time on it again and again.
+
+We also presented this idea to a web and mobile app development agency who confirmed that they could use this tool as an optimization in their own workflow. They were previously using hand-written internal procedures to make it easier for the developers to set up a new project whenever they start a new project for a client. However, this tool could optimize that even further by cutting the time required to set up a project from several hours to a few seconds.
 
 The motivation behind proposing this idea is to automate all this grunt work. And build a tool that can do all these configurations within minutes, if not seconds.
 
